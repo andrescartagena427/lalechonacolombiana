@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Lechona Colombiana | Villavicencio</title>
+  <meta name="description" content="La auténtica lechona colombiana en Villavicencio. Pide a domicilio, paga en línea o reserva tu mesa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Figtree:wght@400;500;600;700;800&family=Kaushan+Script&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="logo" href="#inicio" aria-label="La Lechona Colombiana, inicio">
+        <svg class="logo__icono" viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 18c-6 0-9-6-5-10 3-3 8-2 10 1 2-5 9-7 14-4 4-3 11-1 12 5 5 0 7 6 3 9"/><path d="M16 18h36v5H16z"/><path d="M14 30c0-4 4-7 8-7h20c8 0 14 6 14 14s-6 13-14 13H24c-6 0-10-4-10-9"/><ellipse cx="34" cy="38" rx="7" ry="5"/><path d="M32 38h.01M36 38h.01"/><path d="M24 31h.01M44 31h.01"/><path d="M14 33l-6-3v8l6-1"/></svg>
+        <span class="logo__texto">
+          <b>La Lechona</b>
+          <i>Colombiana</i>
+          <small>Tradición que se disfruta</small>
+        </span>
+      </a>
+
+      <nav class="menu-principal" aria-label="Principal">
+        <a href="#inicio" class="activo">Inicio</a>
+        <a href="#historia">Nuestra Historia</a>
+        <a href="#menu">Menú</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="boton boton--rojo boton-carrito" type="button" id="abrirCarrito" aria-label="Ver tu pedido">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 7V5M10 5h4M2 20h20"/></svg>
+        <span class="boton-carrito__texto">Haz tu pedido</span>
+        <span class="contador" data-contador hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ PORTADA ============ -->
+    <section class="portada" id="inicio">
+      <div class="portada__imagen" role="img" aria-label="Lechona entera recién horneada, abierta, con el relleno de arroz amarillo y carne de cerdo"></div>
+      <div class="contenedor portada__contenido">
+        <p class="antetitulo">Tradición colombiana en cada bocado</p>
+        <h1>La auténtica <em>lechona colombiana</em> con todo su sabor</h1>
+        <p class="portada__texto">Disfruta de la mejor lechona, preparada con recetas tradicionales, ingredientes frescos y el inigualable sabor de nuestra tierra.</p>
+        <div class="botones">
+          <button class="boton boton--rojo" type="button" data-abrir-carrito>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 7V5M10 5h4M2 20h20"/></svg>
+            Haz tu pedido
+          </button>
+          <a class="boton boton--borde" href="#menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2v20M4 2v6a3 3 0 0 0 6 0V2M17 2c-2 2-3 5-3 8h3v12"/></svg>
+            Ver menú
+          </a>
+        </div>
+        <ul class="valores">
+          <li><span class="valores__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13a4 4 0 0 1 1-7.9A5 5 0 0 1 17 5.1 4 4 0 0 1 18 13v6H6z"/><path d="M6 17h12"/></svg></span>Recetas<br>tradicionales</li>
+          <li><span class="valores__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg></span>Ingredientes<br>frescos</li>
+          <li><span class="valores__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span>Sabor<br>inigualable</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ HISTORIA ============ -->
+    <section class="historia" id="historia">
+      <div class="contenedor historia__fila">
+        <img class="historia__foto" src="img/historia.jpg" alt="Plato de lechona con arroz, cuero tostado y arepas asadas">
+        <div class="historia__texto">
+          <p class="antetitulo">Nuestra historia</p>
+          <h2 class="titulo">Más que un plato, <em>una tradición</em></h2>
+          <p>Somos un restaurante dedicado a mantener viva la tradición de la lechona colombiana. Cada porción está hecha con amor, dedicación y el sabor único de nuestra cultura.</p>
+          <a class="boton boton--borde boton--chico" href="#reservas">Conoce nuestra historia
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="manuscrita historia__frase" aria-hidden="true">La tradición<br>también se<br>comparte</p>
+      </div>
+    </section>
+
+    <!-- ============ MENÚ ============ -->
+    <section class="menu" id="menu">
+      <div class="contenedor menu__fila">
+        <div class="menu__intro">
+          <p class="antetitulo">Nuestro menú</p>
+          <h2 class="titulo">Elige tu <em>favorito</em></h2>
+          <p>Aquí encontrarás la mejor lechona colombiana, acompañada de los tradicionales complementos que la hacen única.</p>
+          <button class="boton boton--rojo" type="button" data-abrir-carrito>Ver mi pedido
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="menu__tarjetas" id="tarjetas">
+          <!-- Las tarjetas se generan desde js/app.js (lista MENU) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVAS ============ -->
+    <section class="reservas" id="reservas">
+      <div class="reservas__foto">
+        <img src="img/reserva.jpg" alt="Lechona servida con su relleno de arroz y carne">
+        <p class="manuscrita">¡Reserva hoy<br>y vive la<br>experiencia!</p>
+      </div>
+      <div class="contenedor reservas__contenedor">
+        <form class="reservas__caja" id="formReserva" novalidate>
+          <div class="reservas__cabeza">
+            <span class="reservas__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13a4 4 0 0 1 1-7.9A5 5 0 0 1 17 5.1 4 4 0 0 1 18 13v6H6z"/><path d="M6 17h12"/></svg></span>
+            <div>
+              <p class="antetitulo antetitulo--sin-linea">Reserva tu mesa</p>
+              <h2>Disfruta en familia o con amigos</h2>
+            </div>
+          </div>
+          <div class="reservas__campos">
+            <label class="campo-icono"><span class="sr">Nombre completo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              <input id="rNombre" placeholder="Nombre completo" autocomplete="name" required>
+            </label>
+            <label class="campo-icono"><span class="sr">Celular</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+              <input id="rTel" type="tel" placeholder="Celular" autocomplete="tel" required>
+            </label>
+            <label class="campo-icono"><span class="sr">Fecha</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              <input id="rFecha" type="date" required>
+            </label>
+            <label class="campo-icono"><span class="sr">Hora</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <input id="rHora" type="time" required>
+            </label>
+            <label class="campo-icono"><span class="sr">Número de personas</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 13.5a7 7 0 0 1 4 6.5"/></svg>
+              <select id="rPersonas" required>
+                <option value="">Número de personas</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>Más de 8</option>
+              </select>
+            </label>
+            <button class="boton boton--rojo" type="submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+              Reservar mesa
+            </button>
+          </div>
+          <p class="mensaje" id="msgReserva" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="pie" id="contacto">
+    <div class="contenedor pie__fila">
+      <a class="logo" href="#inicio" aria-label="La Lechona Colombiana, inicio">
+        <svg class="logo__icono" viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 18c-6 0-9-6-5-10 3-3 8-2 10 1 2-5 9-7 14-4 4-3 11-1 12 5 5 0 7 6 3 9"/><path d="M16 18h36v5H16z"/><path d="M14 30c0-4 4-7 8-7h20c8 0 14 6 14 14s-6 13-14 13H24c-6 0-10-4-10-9"/><ellipse cx="34" cy="38" rx="7" ry="5"/><path d="M32 38h.01M36 38h.01"/><path d="M24 31h.01M44 31h.01"/><path d="M14 33l-6-3v8l6-1"/></svg>
+        <span class="logo__texto"><b>La Lechona</b><i>Colombiana</i><small>Tradición que se disfruta</small></span>
+      </a>
+      <p class="pie__dato">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span data-direccion>[DIRECCIÓN]</span>
+      </p>
+      <p class="pie__dato">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span data-telefono>[NÚMERO]</span>
+      </p>
+      <div class="redes">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 6 5"/></svg></a>
+      </div>
+      <p class="manuscrita pie__frase">¡Síguenos<br>en redes!</p>
+    </div>
+    <div class="pie__cenefa" aria-hidden="true"></div>
+    <div class="contenedor pie__legal">
+      <span>© 2026 La Lechona Colombiana. Todos los derechos reservados.</span>
+      <span><a href="#">Términos y condiciones</a> · <a href="#">Política de privacidad</a></span>
+    </div>
+  </footer>
+
+  <!-- Botón flotante del pedido (celulares) -->
+  <button class="boton boton--rojo flotante" type="button" id="flotante" data-abrir-carrito hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 7V5M10 5h4M2 20h20"/></svg>
+    <span id="flotanteTexto">Ver pedido</span>
+  </button>
+
+  <!-- ============ CARRITO ============ -->
+  <div class="velo" id="velo" hidden></div>
+  <aside class="carrito" id="carrito" aria-label="Tu pedido" hidden>
+    <div class="carrito__cabeza">
+      <h2 id="carritoTitulo">Tu pedido</h2>
+      <button class="boton-icono" type="button" id="cerrarCarrito" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="pasos"><span data-paso="1">1. Pedido</span><span data-paso="2">2. Entrega y pago</span><span data-paso="3">3. Confirmación</span></div>
+
+    <!-- Paso 1: productos -->
+    <div class="carrito__cuerpo" id="paso1"></div>
+
+    <!-- Paso 2: entrega y pago -->
+    <form class="carrito__cuerpo" id="paso2" novalidate hidden>
+      <div class="campo"><label for="nombre">Nombre completo</label><input id="nombre" autocomplete="name" required></div>
+      <div class="campo"><label for="tel">Celular</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 123 4567" required></div>
+      <div class="dos-columnas">
+        <div class="campo"><label for="barrio">Barrio</label><input id="barrio" placeholder="Ej: Barzal" required></div>
+        <div class="campo"><label for="dir">Dirección</label><input id="dir" autocomplete="street-address" placeholder="Calle, número, casa" required></div>
+      </div>
+      <div class="campo"><label for="notas">Indicaciones (opcional)</label><textarea id="notas" placeholder="Punto de referencia, sin ají, cambio para $50.000…"></textarea></div>
+      <fieldset class="campo">
+        <legend>¿Cómo vas a pagar?</legend>
+        <div class="pagos">
+          <label class="pago"><input type="radio" name="pago" value="Nequi / Daviplata" checked><span><b>Nequi o Daviplata</b><small>Transfieres y envías el comprobante por WhatsApp.</small></span></label>
+          <label class="pago"><input type="radio" name="pago" value="Tarjeta / PSE"><span><b>Tarjeta o PSE</b><small>Pagas en línea con un link de pago seguro.</small></span></label>
+          <label class="pago"><input type="radio" name="pago" value="Efectivo contra entrega"><span><b>Efectivo contra entrega</b><small>Pagas al domiciliario cuando recibes.</small></span></label>
+        </div>
+      </fieldset>
+      <p class="error" id="error" hidden></p>
+    </form>
+
+    <!-- Paso 3: confirmación -->
+    <div class="carrito__cuerpo" id="paso3" hidden>
+      <div class="confirmacion">
+        <span class="confirmacion__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>
+        <h3>¡Pedido listo!</h3>
+        <p>Número de pedido: <span class="numero-pedido" id="numeroPedido"></span></p>
+        <div class="nota" id="instruccionPago"></div>
+        <p class="tenue">Para que empecemos a prepararlo, envíanos el pedido por WhatsApp. Se abre el chat con el mensaje ya escrito.</p>
+        <a class="boton boton--rojo" id="enlaceWhatsapp" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg>
+          Enviar pedido por WhatsApp
+        </a>
+        <pre class="resumen" id="resumen"></pre>
+        <button class="boton boton--borde" type="button" id="nuevoPedido">Hacer otro pedido</button>
+      </div>
+    </div>
+
+    <div class="carrito__pie" id="carritoPie">
+      <div class="linea"><span>Subtotal</span><span id="subtotal">$ 0</span></div>
+      <div class="linea"><span>Domicilio</span><span id="domicilio">$ 0</span></div>
+      <div class="linea linea--total"><span>Total</span><span id="total">$ 0</span></div>
+      <div class="carrito__acciones">
+        <button class="boton boton--borde" type="button" id="atras" hidden>Atrás</button>
+        <button class="boton boton--rojo" type="button" id="seguir">Continuar con la entrega</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
